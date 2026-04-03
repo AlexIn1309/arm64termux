@@ -38,10 +38,6 @@ _start:
 
   add w3, w2, w1  //  Suma: resultado = num2 + num1
 
-  add w3, w3, #48 //  Convertimos a ascii
-  ldr x0, =resultado  //  direccion de memoria
-  strb w3, [x0] //  guarda el byte en res
-
   mov w4, #10 //  divisor
   udiv w5, w3, w4 //  w5 = 12 / 10 = 1 (cociente: primer digito)
   msub w6, w5, w4, w3 //  w6 = 12 - (1 * 10) = 2 (residuo: segundo digito)
